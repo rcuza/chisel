@@ -2,6 +2,14 @@
 
 Written by [David Zhou][dz] in [python][py], forked and enhanced by [Chyetanya Kunte][ck] for his personal use, [Chisel][ch] is an amazing blog engine -- all in just one file. 
 
+## Description
+The `chisel` utility takes a set of markdown formatted posts and produces the 
+static html structure suitable for publishing the posts. The script works best
+in conjunction with a revision control system that also contains the templates,
+raw posts, and generated site. 
+
+### [Chyetanya Kunte][ck]'s Enhancements
+
 This fork includes the following additions and enhancements:
 
 - Smartypants content parsing to emit typographically nicer quotes, proper em and en dashes, etc.
