@@ -28,11 +28,11 @@ import datetime
 #     /ckunte.github.com (the generated html site from post files)
 # the locations are used thus:
 #
-BASEURL = "http://ckunte.net/log/" #end with slash
+BASEURL = "http://blog.example.com/" #end with slash
 # The following tells chisel where to look for native posts:
-SOURCE = "../ckunte.github.com/log/posts/" #end with slash
+SOURCE = "./posts/" #end with slash
 #  The following tells chisel where to generate site:
-DESTINATION = "../ckunte.github.com/log/" #end with slash
+DESTINATION = "./site/" #end with slash
 HOME_SHOW = 3 #numer of entries to show on homepage
 TEMPLATE_PATH = "./templates/"
 TEMPLATE_OPTIONS = {}
