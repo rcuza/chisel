@@ -1,0 +1,27 @@
+
+ * Update chisel.py as is to create the blog.example.com site you want
+	chisel.py
+	posts/
+	site/
+	templates/
+   Once that is all checked into git, then it should be easy to see that
+   changes to chisel.py do not break site generation.
+
+ * Move configuration information into a seperate file (JSON)
+	import ConfigPartser
+	confg = ConfigParer.ConfigParser()
+	config.read("example.com.ini")
+  The above code gets the config file into the config object.
+	config.sections() # shows sections
+	config.items("GENERAL") shows items in the GENERAL section
+	for x,y in config.items("TEMPLATES"):
+		templates[x] = y
+  The above code will create the templates dictionary.
+
+ * Need to add a list to chisel.py of expected variables that are defined in INI
+   {BASEURL, SOURCE, DESTINATION, HOME_SHOW, TEMPLATE_PATH, TEMPLATE_OPTIONS, TIME_FORMAT, ENTRY_TIME_FORMAT, URLEXT, PATHEXT, title, description, description_rss, title_rss}
+
+ * Need to test changes as you make them to chisel.py
+
+ * Rename this if you end up changing it a lot: Burin see https://en.wikipedia.org/wiki/Burin
+
