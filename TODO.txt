@@ -25,3 +25,4 @@
 
  * Rename this if you end up changing it a lot: Burin see https://en.wikipedia.org/wiki/Burin
 
+ * What is the correct way to let python know the encoding of the script?
