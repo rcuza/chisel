@@ -12,7 +12,7 @@
 #   i.e., http://staticsite.com/2012/post.html or http://staticsite.com/2012/post
 #
 # Requires:
-# jinja2 mdx_smartypants, PyRSS2Gen
+# jinja2, markdown, mdx_smartypants, PyRSS2Gen
 
 import sys, re, time, os, codecs
 import jinja2, markdown, mdx_smartypants, PyRSS2Gen
