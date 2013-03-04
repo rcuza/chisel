@@ -39,7 +39,7 @@ source_path = config.get("GENERAL", "source_path")
 #  The following tells chisel where to generate site:
 DESTINATION = config.get("GENERAL", "destination_path")
 HOME_SHOW = 3 #numer of entries to show on homepage
-TEMPLATE_PATH = "./templates/"
+TEMPLATE_PATH = config.get("GENERAL", "templates_path")
 TEMPLATE_OPTIONS = {}
 TEMPLATES = {
     'home': "home.html",
