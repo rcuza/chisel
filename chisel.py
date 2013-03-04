@@ -17,20 +17,26 @@
 import sys, re, time, os, codecs
 import jinja2, markdown, mdx_smartypants, PyRSS2Gen
 import datetime
+import ConfigParser
 
 #Settings
-# For folders that look like the following (this is primarily 
-# done to keep native post files and the generated html files 
-# separate; don't have to be -- just my personal preference):
-# Sites
-#     /chisel (the generator)
-#     /ckunte.github.com/posts (markdown post files)
-#     /ckunte.github.com (the generated html site from post files)
-# the locations are used thus:
-#
-BASEURL = "http://blog.example.com/" #end with slash
+# There is a lot of flexibility in how you can setup your files.
+# A common setup is to keep native post files and the generated html 
+# separate:
+# WorkingDir
+#     /chisel.py          (the generator)
+#     /posts/             (markdown post files)
+#     /blog.example.com/  (the generated html site from post files)
+#     /templates/         (template files)
+
+config_file = ("./example.com.ini")
+config = ConfigParser.ConfigParser()
+config.read(config_file)
+
+BASEURL = config.get("GENERAL", "baseurl")
 # The following tells chisel where to look for native posts:
-SOURCE = "./posts/" #end with slash
+source_path = "./posts/" #end with slash
+#source_path = config.get("GENERAL", "source_path")
 #  The following tells chisel where to generate site:
 DESTINATION = "./site/" #end with slash
 HOME_SHOW = 3 #numer of entries to show on homepage
@@ -155,7 +161,7 @@ def detail_pages(f, e):
 def main():
     print "Chiseling..."
     print "\tReading files...",
-    files = sorted(get_tree(SOURCE), cmp=compare_entries)
+    files = sorted(get_tree(source_path), cmp=compare_entries)
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(TEMPLATE_PATH), **TEMPLATE_OPTIONS)
     print "Done."
     print "\tRunning steps..."
