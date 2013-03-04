@@ -35,8 +35,7 @@ config.read(config_file)
 
 BASEURL = config.get("GENERAL", "baseurl")
 # The following tells chisel where to look for native posts:
-source_path = "./posts/" #end with slash
-#source_path = config.get("GENERAL", "source_path")
+source_path = config.get("GENERAL", "source_path")
 #  The following tells chisel where to generate site:
 DESTINATION = "./site/" #end with slash
 HOME_SHOW = 3 #numer of entries to show on homepage
