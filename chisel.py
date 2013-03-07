@@ -41,13 +41,7 @@ DESTINATION = config.get("GENERAL", "destination_path")
 HOME_SHOW = 3 #numer of entries to show on homepage
 TEMPLATE_PATH = config.get("GENERAL", "templates_path")
 TEMPLATE_OPTIONS = {}
-TEMPLATES = {
-    'home': "home.html",
-    'detail': "detail.html",
-    'archive': "archive.html",
-    'colophon': "colophon.html",
-    '404': "404.html",
-}
+TEMPLATES = dict(config.items("TEMPLATES"))
 TIME_FORMAT = "%b %d, %Y"
 ENTRY_TIME_FORMAT = "%m/%d/%Y"
 #FORMAT should be a callable that takes in text
