@@ -18,6 +18,8 @@
 		templates[x] = y
   The above code will create the templates dictionary.
 
+ * Templates should be seperate from config. Move ini info into template directory.
+
  * Work on templates and get blog going
 
  * Need to add a list to chisel.py of expected variables that are defined in INI
