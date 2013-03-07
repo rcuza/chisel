@@ -42,8 +42,8 @@ HOME_SHOW = 3 #numer of entries to show on homepage
 TEMPLATE_PATH = config.get("GENERAL", "templates_path")
 TEMPLATE_OPTIONS = {}
 TEMPLATES = dict(config.items("TEMPLATES"))
-TIME_FORMAT = "%b %d, %Y"
-ENTRY_TIME_FORMAT = "%m/%d/%Y"
+TIME_FORMAT = config.get("GENERAL", "time_format")
+ENTRY_TIME_FORMAT = config.get("GENERAL", "entry_time_format")
 #FORMAT should be a callable that takes in text
 #and returns formatted text
 FORMAT = lambda text: markdown.markdown(text, ['footnotes','smartypants',])
