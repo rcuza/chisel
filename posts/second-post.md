@@ -1,5 +1,5 @@
-Second Post
-2/1/2012
+Subject: Second Post
+Date: 2/1/2012
 
 It has been a while since I posted the first post, but that is okey. I am ok, you are ok. We are all ok.
 
