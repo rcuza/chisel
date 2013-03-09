@@ -20,6 +20,19 @@
 
  * Templates should be seperate from config. Move ini info into template directory.
 
+ * If we use RFC822 formate for posts, the following code can get out the different
+   parts:
+
+  from email.parser import Parser
+  post = open('posts/third-post.md','rb')
+  msg = post.read()
+  headers = Parser().parsestr(msg)
+  headers['Title']
+  headers['Date']
+  headers.get_payload()
+
+  # http://docs.python.org/2/library/email-examples.html
+
  * Work on templates and get blog going
 
  * Need to add a list to chisel.py of expected variables that are defined in INI
