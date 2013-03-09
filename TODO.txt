@@ -1,5 +1,5 @@
 
- * Update chisel.py as is to create the blog.example.com site you want
+ *DONE* Update chisel.py as is to create the blog.example.com site you want
 	chisel.py
 	posts/
 	site/
@@ -7,7 +7,7 @@
    Once that is all checked into git, then it should be easy to see that
    changes to chisel.py do not break site generation.
 
- * Move configuration information into a seperate file (JSON)
+  *DONE* Move configuration information into a seperate file (INI)
 	import ConfigPartser
 	confg = ConfigParer.ConfigParser()
 	config.read("example.com.ini")
@@ -18,6 +18,23 @@
 		templates[x] = y
   The above code will create the templates dictionary.
 
+ * Templates should be seperate from config. Move ini info into template directory.
+
+ * If we use RFC822 formate for posts, the following code can get out the different
+   parts:
+
+  from email.parser import Parser
+  post = open('posts/third-post.md','rb')
+  msg = post.read()
+  headers = Parser().parsestr(msg)
+  headers['Title']
+  headers['Date']
+  headers.get_payload()
+
+  # http://docs.python.org/2/library/email-examples.html
+
+ * Work on templates and get blog going
+
  * Need to add a list to chisel.py of expected variables that are defined in INI
    {BASEURL, SOURCE, DESTINATION, HOME_SHOW, TEMPLATE_PATH, TEMPLATE_OPTIONS, TIME_FORMAT, ENTRY_TIME_FORMAT, URLEXT, PATHEXT, title, description, description_rss, title_rss}
 
@@ -26,3 +43,5 @@
  * Rename this if you end up changing it a lot: Burin see https://en.wikipedia.org/wiki/Burin
 
  * What is the correct way to let python know the encoding of the script?
+
+ * nice to have: script could genreate its own config file example
