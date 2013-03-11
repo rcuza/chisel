@@ -18,6 +18,7 @@ import sys, re, time, os, codecs
 import jinja2, markdown, mdx_smartypants, PyRSS2Gen
 import datetime
 import ConfigParser
+from email.parser import Parser
 
 #Settings
 # There is a lot of flexibility in how you can setup your files.
@@ -78,13 +79,14 @@ def get_tree(source):
             if name[0] == ".": continue
             path = os.path.join(root, name)
             f = open(path, "rU")
-            title = f.readline()
-            date = time.strptime(f.readline().strip(), ENTRY_TIME_FORMAT)
+            ff = Parser().parse(f)
+            title = ff['Subject']
+            date = time.strptime(ff['Date'], ENTRY_TIME_FORMAT)
             year, month, day = date[:3]
             files.append({
                 'title': title,
                 'epoch': time.mktime(date),
-                'content': FORMAT(''.join(f.readlines()[1:]).decode('UTF-8')),
+                'content': FORMAT(''.join(ff._payload.decode('UTF-8'))),
                 #'url': '/'.join([str(year), "%.2d" % month, "%.2d" % day, os.path.splitext(name)[0] + ".html"]),
                 # Uncheck the following line if you have no rewrite (URLs end with .html).
                 'url': '/'.join([str(year), os.path.splitext(name)[0] + URLEXT]),
