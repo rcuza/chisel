@@ -8,7 +8,7 @@
    changes to chisel.py do not break site generation.
 
   *DONE* Move configuration information into a seperate file (INI)
-	import ConfigPartser
+	import ConfigParser
 	confg = ConfigParer.ConfigParser()
 	config.read("example.com.ini")
   The above code gets the config file into the config object.
@@ -27,6 +27,7 @@
   post = open('posts/third-post.md','rb')
   msg = post.read()
   headers = Parser().parsestr(msg)
+  # alternately: headers = Parser().parse(post)
   headers['Title']
   headers['Date']
   headers.get_payload()
