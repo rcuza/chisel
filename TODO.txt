@@ -1,4 +1,3 @@
-
  *DONE* Update chisel.py as is to create the blog.example.com site you want
 	chisel.py
 	posts/
@@ -29,8 +28,16 @@
   headers['Title']
   headers['Date']
   headers.get_payload()
-
   # http://docs.python.org/2/library/email-examples.html
+
+ * Get the templates to work cleanly in local browser.
+
+   There is a coupling between the steps in chisel.py and the templates. 
+   Can this be broken? What is the best way to simplify chisel so the 
+   presentation preferences (templates) are serpate from the posts and
+   from the generation code?
+
+   To answer this I need to get the templates actually working on my local machine.
 
  * Templates should be seperate from config. Move ini info into template directory.
 
