@@ -30,7 +30,7 @@
   headers.get_payload()
   # http://docs.python.org/2/library/email-examples.html
 
- * Get the templates to work cleanly in local browser.
+ *DONE* Get the templates to work cleanly in local browser.
 
    There is a coupling between the steps in chisel.py and the templates. 
    Can this be broken? What is the best way to simplify chisel so the 
