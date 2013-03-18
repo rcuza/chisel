@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
  <meta charset="utf-8">
- <title>ckunte.net log{%block title %}{% endblock %}</title>
+ <title>example.com log{%block title %}{% endblock %}</title>
  <meta name="description" content="A personal log of ckunte.">
  <meta name="viewport" content="width=702">
- <link rel="shortcut icon apple-touch-icon-precomposed" href="/log/images/favicon.png" type="image/x-icon">
- <link rel="stylesheet" href="/log/css/style.css" type="text/css">
- <link rel="alternate" type="application/rss+xml" title="ckunte.net log" href="/log/rss.xml">
+ <link rel="shortcut icon apple-touch-icon-precomposed" href="/images/favicon.png" type="image/x-icon">
+ <link rel="stylesheet" href="/blog/css/example.com.css" type="text/css">
+ <link rel="alternate" type="application/rss+xml" title="ckunte.net log" href="/rss.xml">
 </head>
 <body>
  <div id="wrap">
   <div id="content">
-   <h1><a href="/log/" title="ckunte.net log"><img src="/log/images/avatar.png" alt=""></a></h1>
-   <p class="desc">fsck -vf /dev/hdc1 > log</p>
+   <h1><a href="/" title="example.com log"><img src="/blog/images/example.com.png" alt=""></a></h1>
+   <p class="desc">example.com blog</p>
    <p class="spacer">&nbsp;</p>
     <div id="left">
      <div id="nav">
       <ul>
-       {% for href, caption, description in [('/log/colophon', 'Colophon', 'About this site.'), ('https://github.com/ckunte', 'Code', 'Feel free to fork.'), ('/log/rss', 'RSS', 'ckunte.net log')] -%}
+       {% for href, caption, description in [('/colophon', 'Colophon', 'About this site.'), ('https://github.com/ckunte', 'Code', 'Feel free to fork.'), ('/rss', 'RSS', 'ckunte.net log')] -%}
         <li><a title="{{ description }}" href="{{ href }}">{{ caption }}</a></li>
        {% endfor -%}
       </ul>
