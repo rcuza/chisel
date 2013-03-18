@@ -50,10 +50,10 @@ ENTRY_TIME_FORMAT = config.get("GENERAL", "entry_time_format")
 FORMAT = lambda text: markdown.markdown(text, ['footnotes','smartypants',])
 # default URLEXT = ".html"
 # set URLEXT = "" if server recognizes .html URLs and can be linked-to without the extension part.
-URLEXT = ""
+URLEXT = ".html"
 # default PATHEXT = ""
 # set PATHEXT = "" if URLEXT = ".html" and vice versa.
-PATHEXT = ".html"
+PATHEXT = ""
 RSS = PyRSS2Gen.RSS2(
     title = "ckunte.net log",
     link = BASEURL + "rss.xml",

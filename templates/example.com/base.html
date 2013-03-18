@@ -12,13 +12,13 @@
 <body>
  <div id="wrap">
   <div id="content">
-   <h1><a href="/" title="example.com log"><img src="/blog/images/example.com.png" alt=""></a></h1>
+   <h1><a href="/blog/" title="example.com log"><img src="/blog/images/example.com.png" alt=""></a></h1>
    <p class="desc">example.com blog</p>
    <p class="spacer">&nbsp;</p>
     <div id="left">
      <div id="nav">
       <ul>
-       {% for href, caption, description in [('/colophon', 'Colophon', 'About this site.'), ('https://github.com/ckunte', 'Code', 'Feel free to fork.'), ('/rss', 'RSS', 'ckunte.net log')] -%}
+       {% for href, caption, description in [('/blog/colophon.html', 'Colophon', 'About this site.'), ('https://github.com/ckunte', 'Code', 'Feel free to fork.'), ('/blog/rss.xml', 'RSS', 'ckunte.net log')] -%}
         <li><a title="{{ description }}" href="{{ href }}">{{ caption }}</a></li>
        {% endfor -%}
       </ul>
