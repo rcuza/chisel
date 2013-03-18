@@ -1,0 +1,20 @@
+{
+	"last_updated": "2013-03-16 20:00:00 -0700",
+	  "updating": [
+    {
+      "index": 1,
+      "date": "20130308",
+      "affects": "users of net-im/folks and devel/libgee",
+      "author": "kwm@FreeBSD.org",
+      "content": "\n   <p>This is my third post and I am sticking to it. It is a simple post, but that is the way I like it. This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.</p><code>{{\n    a = b + c\n    print 'Hello, World'\n}}}\n</code> <p>This is my third post and I am sticking to it. It is a simple post, but that is the way I like it. This is my first post and I am sticking to it. It is a simple post, but that is the way I like it. This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.  </p> <p>The End</p>"
+
+    },
+    {
+      "index": 2,
+      "date": "20130307",
+      "affects": "users of textproc/elasticsearch",
+      "author": "tj@FreeBSD.org",
+      "content": "\n   <p>This is my third post and I am sticking to it. It is a simple post, but that is the way I like it. This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.</p> <p>This is my third post and I am sticking to it. It is a simple post, but that is the way I like it. This is my first post and I am sticking to it. It is a simple post, but that is the way I like it. This is my first post and I am sticking to it. It is a simple post, but that is the way I like it.  </p> <p>The End</p>"
+    }
+  ]
+}
